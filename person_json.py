@@ -42,7 +42,7 @@ async def main():
 
     for person in people:
 
-        if person.get('detail') is None: # исключаем из обработки экземпляры {'detail': 'Not found'}
+        if person.get('detail') is None:
             detail_tasks = []
 
             films = asyncio.create_task(get_detail_names(person, 'films', 'title'))
